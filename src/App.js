@@ -152,7 +152,7 @@ export default function App() {
 
   if(over) {
     
-   quizItems=""
+   quizItems=<div className="empty"></div>
   
   }  
   
