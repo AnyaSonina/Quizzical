@@ -4,13 +4,15 @@ import Quiz from "./components/Quiz"
 import Footer from "./components/Footer"
 import {nanoid} from "nanoid"
 import Confetti from "react-confetti"
+import blob1 from './blob-1.svg'
+import blob2 from './blob-2.svg'
 
 
 export default function App() {
 
   const[toggle, setToggle] = React.useState(true) 
 
-  function swithcScreens(){
+  function switchScreens(){
    setToggle(toggle => !toggle)
   }
 
@@ -150,14 +152,16 @@ export default function App() {
 
   if(over) {
     
-   quizItems=<div className="empty"></div>
+   quizItems=""
   
   }  
   
 
   return (
     <div >
-      {toggle && <Start toggle = {swithcScreens}/>}
+      <img src={blob1} alt="#" className='blob blob1'></img>
+      <img src={blob2} alt="#" className='blob blob2'></img>
+      {toggle && <Start toggle = {switchScreens}/>}
       {!toggle &&      
       <main className="quiz-main">
       {quizItems}
@@ -173,8 +177,7 @@ export default function App() {
       check = {check}
       />
       {check && allCorrect ? <Confetti/> : ""}
-      <div className="blob-3"></div>
-      <div className="blob-4"></div>
+     
       </main>}   
     </div>
   )

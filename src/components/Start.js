@@ -8,8 +8,7 @@ export default function Start(props) {
           <h1>Quizzical</h1>
           <p>Press the button bellow and start the quiz. Choose 1 answer out of 5 suggested.</p>
           <button onClick={props.toggle} className="start-btn">Start quiz</button>
-          <div className="blob-1"></div>
-          <div className="blob-2"></div>
+         
         </main>
     )
 }
